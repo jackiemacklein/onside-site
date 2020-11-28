@@ -30,8 +30,8 @@ import routes from "../src/routes";
 //const credentials = { cert: certificate, key: privateKey, passphrase: pass };
 
 /* express config */
-//const PORT = 80;
-const PORT = 3000;
+const PORT = 80;
+//const PORT = 3000;
 const PORT_HTTPS = 443;
 const app = express();
 
@@ -110,10 +110,15 @@ const renderHead = (activeRoute, initialData) => {
 
 var httpServer = http.createServer(app);
 //var httpsServer = https.createServer(credentials, app);
-
+/*
 httpServer.listen(PORT, function () {
   console.log("Server is running on HTTP PORT: " + PORT);
 });
-/*httpsServer.listen(PORT_HTTPS, function () {
+httpsServer.listen(PORT_HTTPS, function () {
   console.log("Server is running on HTTPS PORT: " + PORT_HTTPS);
 });*/
+
+//var port = process.env.PORT || 3000;
+app.listen(process.env.PORT || PORT_HTTP, function () {
+  console.log("listening on port %s", process.env.PORT || PORT_HTTP);
+});
