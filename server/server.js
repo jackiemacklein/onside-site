@@ -30,8 +30,8 @@ import routes from "../src/routes";
 //const credentials = { cert: certificate, key: privateKey, passphrase: pass };
 
 /* express config */
-const PORT = 80;
-//const PORT = 3000;
+//const PORT = 80;
+const PORT = 3000;
 const PORT_HTTPS = 443;
 const app = express();
 
