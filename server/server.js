@@ -31,7 +31,7 @@ import routes from "../src/routes";
 
 /* express config */
 //const PORT = 80;
-const PORT = 3001;
+const PORT = 3000;
 const PORT_HTTPS = 443;
 const app = express();
 
