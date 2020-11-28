@@ -1,0 +1,31 @@
+{
+  "short_name": "Agência Onside",
+  "name": "Agência Digital Onside",
+  "description": "Agência Onside | Marketing Digital, Criação de Sites, SEO - Cuiabá",
+  "icons": [
+    {
+      "src": "/static/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/static/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#2c57e4",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#2c57e4",
+  "shortcuts": [
+    {
+      "short_name": "Agência Onside",
+      "name": "Agência Digital Onside",
+      "description": "Agência Onside | Marketing Digital, Criação de Sites, SEO - Cuiabá",
+      "url": "/?source=pwa",
+      "icons": [{ "src": "/static/logo192.png", "sizes": "192x192" }]
+    }
+  ]
+}
