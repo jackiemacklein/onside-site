@@ -109,6 +109,9 @@ export const StepDescription = styled.p`
 export const StepsImage = styled.img`
   align-self: center;
   max-width: 100%;
+
+  animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s;
 `;
 
 export const ServicesSection = styled.section`

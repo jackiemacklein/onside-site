@@ -48,10 +48,16 @@ function Component(props) {
     event.preventDefault();
     setSend(true);
 
-    await mailerLite.addSubscriberToGroup("105176750", { email, fields: { name, origin: "site", phone } });
+    try {
+      await mailerLite.addSubscriberToGroup("105176750", { email, fields: { name, origin: "site", phone } });
 
-    setSend(false);
-    history.push("/obrigado");
+      setSend(false);
+      history.push("/obrigado");
+    } catch (error) {
+      console.log(error);
+      alert("Desculpe, ocorreu um erro ao tentar enviar o seu contato! Tente novamente");
+      setSend(false);
+    }
   };
 
   useEffect(() => {}, [initialData]);
@@ -230,12 +236,12 @@ function Component(props) {
             {/* serviço aprosoja */}
             <PortfolioItem>
               <PortfolioItemFigure
-                title="Serviço de Gestão de Sistema de Eleição + Infraestrutura de redes"
-                alt="Serviço de Gestão de Sistema de Eleição + Infraestrutura de redes">
+                title="Serviço de Gestão de Sistema de Eleição + Infraestrutura de redes nas eleições 2020"
+                alt="Serviço de Gestão de Sistema de Eleição + Infraestrutura de redes nas eleições 2020">
                 <PortfolioItemImage
                   src={img1}
-                  title="Serviço de Gestão de Sistema de Eleição + Infraestrutura de redes"
-                  alt="Serviço de Gestão de Sistema de Eleição + Infraestrutura de redes"
+                  title="Serviço de Gestão de Sistema de Eleição + Infraestrutura de redes nas eleições 2020"
+                  alt="Serviço de Gestão de Sistema de Eleição + Infraestrutura de redes nas eleições 2020"
                 />
               </PortfolioItemFigure>
             </PortfolioItem>
@@ -250,13 +256,6 @@ function Component(props) {
                   title="Desenvolvimento de site com foco em vendas - Vida Cartão Fidelidade"
                   alt="Desenvolvimento de site com foco em vendas - Vida Cartão Fidelidade"
                 />
-              </PortfolioItemFigure>
-            </PortfolioItem>
-
-            {/* site da ON */}
-            <PortfolioItem>
-              <PortfolioItemFigure title="Onside Agência Digital" alt="Onside Agência Digital">
-                <PortfolioItemImage src={img3} title="Onside Agência Digital" alt="Onside Agência Digital" />
               </PortfolioItemFigure>
             </PortfolioItem>
           </PortfolioItems>

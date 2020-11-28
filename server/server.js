@@ -23,26 +23,26 @@ import App from "../src/App";
 import routes from "../src/routes";
 
 /* certificates config */
-const privateKey = fs.readFileSync("keys/key.key", "utf8");
-const certificate = fs.readFileSync("keys/cert.crt", "utf8");
-const pass = "@VidaVgD2020$";
+//const privateKey = fs.readFileSync("keys/key.key", "utf8");
+//const certificate = fs.readFileSync("keys/cert.crt", "utf8");
+//const pass = "@VidaVgD2020$";
 
-const credentials = { cert: certificate, key: privateKey, passphrase: pass };
+//const credentials = { cert: certificate, key: privateKey, passphrase: pass };
 
 /* express config */
 //const PORT = 80;
-const PORT = 80;
+const PORT = 3001;
 const PORT_HTTPS = 443;
 const app = express();
 
 //app.use(cors());
 
 app.use(function (req, res, next) {
-  if (!req.connection.encrypted) {
+  /* if (!req.connection.encrypted) {
     res.redirect("https://" + req.headers.host + req.url);
-  } else {
-    next();
-  }
+  } else {*/
+  next();
+  //}
 });
 
 //app.use("/", express.static(path.resolve(__dirname, "..", "construction/index.html")));
@@ -109,11 +109,11 @@ const renderHead = (activeRoute, initialData) => {
 };
 
 var httpServer = http.createServer(app);
-var httpsServer = https.createServer(credentials, app);
+//var httpsServer = https.createServer(credentials, app);
 
 httpServer.listen(PORT, function () {
   console.log("Server is running on HTTP PORT: " + PORT);
 });
-httpsServer.listen(PORT_HTTPS, function () {
+/*httpsServer.listen(PORT_HTTPS, function () {
   console.log("Server is running on HTTPS PORT: " + PORT_HTTPS);
-});
+});*/

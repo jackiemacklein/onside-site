@@ -178,6 +178,9 @@ export const Title = styled.h1`
   margin-bottom: 35px;
   margin-right: 60%;
 
+  animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s;
+
   @media (max-width: 1120px) {
     align-items: center;
     text-align: center;
@@ -196,6 +199,9 @@ export const Description = styled.p`
 
   margin-bottom: 35px;
   margin-right: 60%;
+
+  animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
 
   span {
     font-family: "TTNorms-Bold";
@@ -259,6 +265,9 @@ export const ImageArt = styled.img`
   position: absolute;
   right: 0;
   top: 0;
+
+  animation: lightSpeedInRight; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
 
   @media (max-width: 1120px) {
     display: none;
