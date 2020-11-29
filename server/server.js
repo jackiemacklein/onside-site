@@ -11,6 +11,8 @@ import http from "http";
 import { ServerStyleSheet, StyleSheetManager } from "styled-components";
 
 //import sourceMapSupport from "source-map-support";
+import MailerLite from "mailerlite-api-v2-node";
+
 /* React utils */
 
 import React from "react";
@@ -31,12 +33,17 @@ import routes from "../src/routes";
 
 /* express config */
 //const PORT = 80;
+
 const PORT = 3000;
+const PORT_HTTP = 3000;
 const PORT_HTTPS = 443;
+const mailerLite = MailerLite("d8bb17227393366b6844168775886036");
+
 const app = express();
 
 //app.use(cors());
 
+app.use(express.json());
 app.use(function (req, res, next) {
   /* if (!req.connection.encrypted) {
     res.redirect("https://" + req.headers.host + req.url);
@@ -51,6 +58,16 @@ app.use("/sitemap.xml", express.static(path.resolve(__dirname, "..", "build/stat
 app.use("/robots.txt", express.static(path.resolve(__dirname, "..", "build/static/robots.txt")));
 app.use("/static", express.static(path.resolve(__dirname, "..", "build/static")));
 app.use("/static", express.static(path.resolve(__dirname, "..", "build/static/media")));
+
+app.post("/subscribes", async function (req, res) {
+  try {
+    await mailerLite.addSubscriberToGroup("105176750", req.body);
+    res.status(201).send({ success: true });
+  } catch (error) {
+    console.log("Erro ao cadastrar lead", error);
+    res.status(500).send({ error: true, more: error });
+  }
+});
 
 app.get("*", (req, res, next) => {
   const activeRoute = routes.find(route => matchPath(req.url, route));

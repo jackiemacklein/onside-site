@@ -11,7 +11,7 @@ import { KieeeHead, useInitialData } from "./../../components/Kieee";
 import { maskTelephone89Digitos } from "./../../utils/functions";
 
 /* import service */
-import { apiMailerLite } from "./../../services/api";
+import { apiNoBaseURL } from "./../../services/api";
 
 /* import components */
 import Header from "./../../components/Header";
@@ -22,7 +22,6 @@ import stepsImage from "./../../assets/images/steps.png";
 
 import img1 from "./../../assets/images/img1.png";
 import img2 from "./../../assets/images/img2.png";
-import img3 from "./../../assets/images/img3.png";
 
 /* import icons */
 
@@ -49,7 +48,7 @@ function Component(props) {
     setSend(true);
 
     try {
-      await apiMailerLite.post("/groups/105176750/subscribers", { email, name, phone, fields: { origin: "Site" } });
+      const { data } = await apiNoBaseURL.post("https://agenciaonside.com.br/subscribes", { email, fields: { name, origin: "site", phone } });
 
       setSend(false);
       history.push("/obrigado");
@@ -270,12 +269,12 @@ function Component(props) {
                   <Input type="text" required placeholder="Seu nome" value={name} onChange={event => setName(event.target.value)} />
                 </FormCol>
                 <FormCol>
-                  <Input type="text" required placeholder="Telefone" value={phone} onChange={event => setPhone(maskTelephone89Digitos(event.target.value))} />
+                  <Input type="text" placeholder="Telefone" value={phone} onChange={event => setPhone(maskTelephone89Digitos(event.target.value))} />
                 </FormCol>
               </FormRow>
               <FormRow>
                 <FormCol>
-                  <Input type="email" placeholder="Seu melhor e-mail" value={email} onChange={event => setEmail(event.target.value)} />
+                  <Input type="email" required placeholder="Seu melhor e-mail" value={email} onChange={event => setEmail(event.target.value)} />
                   <FormButton>
                     {send ? (
                       <>{"Enviando..."}</>
