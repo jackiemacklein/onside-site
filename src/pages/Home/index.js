@@ -9,7 +9,9 @@ import { KieeeHead, useInitialData } from "./../../components/Kieee";
 
 /* import utils */
 import { maskTelephone89Digitos } from "./../../utils/functions";
-import MailerLite from "mailerlite-api-v2-node";
+
+/* import service */
+import { apiMailerLite } from "./../../services/api";
 
 /* import components */
 import Header from "./../../components/Header";
@@ -33,8 +35,6 @@ import { PortfolioSection, PortfolioHeader, PortfolioSubTitle, PortfolioTitle, P
 import { PortfolioItemFigure, PortfolioItemImage } from "./styles";
 import { ContactSection, ContactArticle, ContactTitle, ContactForm, FormRow, FormCol, Input, FormButton } from "./styles";
 
-const mailerLite = MailerLite("d8bb17227393366b6844168775886036");
-
 function Component(props) {
   const initialData = useInitialData(props, requestInitialData);
   const history = useHistory();
@@ -49,7 +49,7 @@ function Component(props) {
     setSend(true);
 
     try {
-      await mailerLite.addSubscriberToGroup("105176750", { email, fields: { name, origin: "site", phone } });
+      await apiMailerLite.post("/groups/105176750/subscribers", { email, name, phone, fields: { origin: "Site" } });
 
       setSend(false);
       history.push("/obrigado");
