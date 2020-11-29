@@ -310,10 +310,10 @@ function Head({ siteConfig }) {
       <KieeeHead
         themeColor="#2c57e4"
         title="Onside | Marketing Digital, Criação de Sites, SEO em Cuiabá"
-        description="Agência Digital em Cuiabá, Desenvolvimento de sites e Aplicativos Android e iOS, Otimização SEO, Tráfego Pago no Google e Facebook ADS, Consultoria em marketing digital."
-        appleIcon="https://agenciaonside.com.br/logo512.png"
-        icon="https://agenciaonside.com.br/logo512.png"
-        imagePath="https://agenciaonside.com.br/logo512.png"
+        description="Agência Digital em Cuiabá, Desenvolvimento de sites e Apps Android e iOS, Otimização SEO, Tráfego no Google e Facebook ADS, Consultoria em marketing digital."
+        appleIcon="https://agenciaonside.com.br/static/logo512.png"
+        icon="https://agenciaonside.com.br/static/logo512.png"
+        imagePath="https://agenciaonside.com.br/static/logo512.png"
         siteName="Agência Onside"
         url={process.env.REACT_APP_SITE_HOST}
         favicon="/static/favicon.png"
