@@ -74,25 +74,22 @@ function Component(props) {
             <Step>
               <StepTitle>Atrair</StepTitle>
               <StepDescription>
-                Através do marketing digital vamos atrair novos e mais clientes para o seu negócio! Fazemos uso das Campanhas no Facebook ADS, Sorteios no
-                instagram e pesquisas no Google com foco na conversão
+                Através de ações estratégicas dentro do marketing digital vamos atrair novos e mais clientes para o seu negócio! Campanhas no Facebook ADS,
+                Sorteios no instagram e pesquisas no Google, são algumas soluções com foco na conversão
               </StepDescription>
             </Step>
 
             <Step>
               <StepTitle>Converter</StepTitle>
               <StepDescription>
-                Através do seu site, das páginas de conversões e do e-mail marketing vamos trabalhar estratégias para converter os seus possíveis fechar vendas
+                Através do seu site, das páginas de conversões e do e-mail marketing trabalhamos estratégias que vão converter os seus clientes e fechar vendas
                 e serviços.
               </StepDescription>
             </Step>
 
             <Step>
               <StepTitle>Fidelizar</StepTitle>
-              <StepDescription>
-                Usando estratégias de e-mail marketing vamos fidelizar os seus clientes através de envios periódicos de ofertas e promoções juntamente com
-                gatilhos mentais.
-              </StepDescription>
+              <StepDescription>Através estratégias de e-mail marketing, remarketing no facebook e instagram vamos fidelizar os seus clientes.</StepDescription>
             </Step>
           </Steps>
           <StepsImage src={stepsImage} alt="Especialidades da Onside Agência Digital" title="Especialidades da Onside Agência Digital" />
@@ -103,15 +100,15 @@ function Component(props) {
             <ServicesHeader>
               <ServicesSubTitle>Nossa Paixão :)</ServicesSubTitle>
               <ServicesTitle>
-                Nossa paixão é transformar vidas e negócios!<span>Confira aqui as especialidades da Onside Agência Digital e se surpreenda.</span>
+                Nossa paixão é transformar negócios!<span>Confira aqui as especialidades da Onside Agência Digital e solicite um orçamento agora mesmo.</span>
               </ServicesTitle>
             </ServicesHeader>
             <Services>
               {/*Desenvolvimento de Sites Incríveis */}
               <Service>
                 <ServiceDescription>
-                  Não criamos sites, desenvolvemos soluções criativas para o seu negócio! Seja para divulgar a sua imagem/empresa, oferecer os seus serviços ou
-                  vender mais pela internet. Nós da Onside temos a solução ideial.
+                  Não desenvolvimento sites, criamos soluções criativas para o seu negócio! Seja para promover a sua imagem, empresa e marca e oferecer seus
+                  serviços na internet. Nós da Onside temos a solução ideial.
                   <br />
                   <span>Faça um orçamento sem compromisso</span>
                 </ServiceDescription>
@@ -130,8 +127,8 @@ function Component(props) {
               {/*Tráfego no Facebook e Google ADS */}
               <Service>
                 <ServiceDescription>
-                  Verdade seja dita! Não basta só ter um site se você quer vender na internet. Você precisa pensar além de ter somente um site "bonitinho", você
-                  precisa investir em tráfego pago, seja no Facebook ou no Google ADS.
+                  Verdade seja dita! Não basta só ter um site na internet. Você precisa ir além, você precisa investir em tráfego pago, seja no Facebook ou no
+                  Google ADS.
                   <br />
                   <span>Fale conosco através do WhatsApp!</span>
                 </ServiceDescription>
@@ -169,8 +166,8 @@ function Component(props) {
               {/*Páginas de Conversão */}
               <Service>
                 <ServiceDescription>
-                  Quer aumentar o número de PROSPECTS na sua carteira? Nós criamos páginas de conversões, as famosas Landing Pages. Com elas você consegue
-                  rastrear os acessos, trocar materiais ricos por informações e realizar vendas.
+                  Quer aumentar o número de PROSPECTS na sua carteira? Criamos páginas de conversões, as famosas Landing Pages. Com elas você consegue rastrear
+                  os acessos, trocar materiais ricos por informações e realizar vendas.
                   <br />
                   <span>Solicite agora mesmo</span>
                 </ServiceDescription>
@@ -188,8 +185,8 @@ function Component(props) {
               {/*Loja virtual que vende de verdade */}
               <Service>
                 <ServiceDescription>
-                  Tem uma loja fisíca e quer maximizar os seus ganhos? Crie agora mesmo a sua loja virtual e comece a vender seus produtos e serviços pela
-                  internet. <span>Estudos apontam que o faturamento do e-commerce cresceu cerca de 58,8% em 2020.</span>
+                  Tem uma loja fisíca e quer escalar o seu negócio? Crie agora mesmo a sua loja virtual com custo baixo e comece a vender seus produtos e
+                  serviços pela internet. <span>Estudos apontam que o faturamento do e-commerce cresceu cerca de 58,8% em 2020.</span>
                   <br />
                   <span>Vai ficar de fora?</span>
                 </ServiceDescription>
@@ -207,10 +204,10 @@ function Component(props) {
               {/*SEO */}
               <Service>
                 <ServiceDescription>
-                  SEO (Search Engine Optimization) é um conjunto de técnicas que visa posicionar uma página nos primeiros resultados nos mecanismos de busca
-                  online, como por exemplo o Google.
+                  Quer se posicionar melhor nas buscas do google e sair na frente de seus concorrentes e aparecer quando os consumidores pesquisarem seus
+                  produtos e serviços? SEO (Search Engine Optimization) é a solução! online, como por exemplo o Google.
                   <br />
-                  <span>Saia na frente dos seus concorrentes, fale conosco pelo whatsApp</span>
+                  <span>Saia na frente, fale conosco pelo whatsApp</span>
                 </ServiceDescription>
                 <ServiceTitle>SEO</ServiceTitle>
                 <ServiceLink
@@ -262,7 +259,7 @@ function Component(props) {
 
         <ContactSection id="contato">
           <ContactArticle>
-            <ContactTitle>Que tal receber um contato da nossa equipe?</ContactTitle>
+            <ContactTitle>Quer receber um contato da nossa equipe?</ContactTitle>
             <ContactForm onSubmit={handleSend}>
               <FormRow>
                 <FormCol>
